@@ -18,3 +18,4 @@ C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\Edu
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\AuthorizationRegistrationCaptcha\obj\Debug\net8.0-windows\AuthorizationRegistrationCaptcha.pdb
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\AuthorizationRegistrationCaptcha\obj\Debug\net8.0-windows\AuthorizationRegistrationCaptcha.genruntimeconfig.cache
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\AuthorizationRegistrationCaptcha\obj\Debug\net8.0-windows\ref\AuthorizationRegistrationCaptcha.dll
+C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\AuthorizationRegistrationCaptcha\obj\Debug\net8.0-windows\AuthorizationRegistrationCaptcha.sourcelink.json
