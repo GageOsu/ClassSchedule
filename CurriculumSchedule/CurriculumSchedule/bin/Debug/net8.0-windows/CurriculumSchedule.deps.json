@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CurriculumSchedule/1.0.0": {
+        "runtime": {
+          "CurriculumSchedule.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CurriculumSchedule/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

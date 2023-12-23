@@ -1,0 +1,41 @@
+﻿<Window x:Class="AuthorizationRegistrationCaptcha.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AuthorizationRegistrationCaptcha"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="45"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Авторизация" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <Label Content="Логин" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+
+        <Label Content="Пороль" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+
+        <Label Content="Каптча" Grid.Row="3" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Stretch"/>
+        <Label Content="Каптча" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+        <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Stretch"/>
+
+        <Button Content="Авторизоваться" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Content="Ошибка" Grid.Row="4" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Stretch"/>
+
+        <Button Content="Регистрация" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+</Window>
