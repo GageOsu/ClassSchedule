@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\App.xaml
-1-487866684
+2-1423168384
 
-22709705000
+231619906795
 2271118895342
-View\MainWindow.xaml;
+View\MainWindow.xaml;View\ViewCabinetCRUDOperation\CreateCabinetWindow.xaml;
 
-False
+True
 

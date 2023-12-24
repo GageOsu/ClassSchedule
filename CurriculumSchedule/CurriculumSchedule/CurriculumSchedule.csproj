@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="View\ViewCabinetCRUDOperation\" />
     <Folder Include="View\ViewCabinetTypeCRUDOperation\" />
     <Folder Include="View\ViewDayCRUDOperation\" />
     <Folder Include="View\ViewGroupCRUDOperation\" />
