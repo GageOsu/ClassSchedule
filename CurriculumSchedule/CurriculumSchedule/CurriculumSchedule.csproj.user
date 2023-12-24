@@ -13,12 +13,24 @@
     <Compile Update="View\ViewCabinetCRUDOperation\UpdateCabinetWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ViewCabinetTypeCRUDOperation\CreateCabinetTypeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewCabinetTypeCRUDOperation\UpdateCabinetTypeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ViewCabinetCRUDOperation\UpdateCabinetWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewCabinetTypeCRUDOperation\CreateCabinetTypeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewCabinetTypeCRUDOperation\UpdateCabinetTypeWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
