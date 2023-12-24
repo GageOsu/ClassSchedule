@@ -19,6 +19,12 @@
     <Compile Update="View\ViewCabinetTypeCRUDOperation\UpdateCabinetTypeWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ViewDayCRUDOperation\CreateDayWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewDayCRUDOperation\UpdateDayWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\MainWindow.xaml">
@@ -31,6 +37,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ViewCabinetTypeCRUDOperation\UpdateCabinetTypeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewDayCRUDOperation\CreateDayWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewDayCRUDOperation\UpdateDayWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
