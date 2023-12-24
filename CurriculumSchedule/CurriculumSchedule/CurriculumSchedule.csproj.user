@@ -37,6 +37,12 @@
     <Compile Update="View\ViewLessonCRUDOperation\UpdateLessonsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ViewLessonNumberCRUDOperation\CreateLessonsNumberWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewLessonNumberCRUDOperation\UpdateLessonNumberWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\MainWindow.xaml">
@@ -67,6 +73,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ViewLessonCRUDOperation\UpdateLessonsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewLessonNumberCRUDOperation\CreateLessonsNumberWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewLessonNumberCRUDOperation\UpdateLessonNumberWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
