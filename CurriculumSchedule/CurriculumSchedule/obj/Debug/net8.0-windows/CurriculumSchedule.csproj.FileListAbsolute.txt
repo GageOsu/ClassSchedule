@@ -3,11 +3,9 @@ C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\Edu
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\bin\Debug\net8.0-windows\CurriculumSchedule.runtimeconfig.json
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\bin\Debug\net8.0-windows\CurriculumSchedule.dll
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\bin\Debug\net8.0-windows\CurriculumSchedule.pdb
-C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\App.g.cs
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\CurriculumSchedule_MarkupCompile.cache
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\CurriculumSchedule_MarkupCompile.lref
-C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\CurriculumSchedule.g.resources
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\CurriculumSchedule.GeneratedMSBuildEditorConfig.editorconfig
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\CurriculumSchedule.AssemblyInfoInputs.cache
@@ -129,3 +127,5 @@ C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\Edu
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\CurriculumSchedule.csproj.AssemblyReference.cache
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\CurriculumSchedule.sourcelink.json
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\CurriculumSchedule.csproj.CopyComplete
+C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\View\MainWindow.g.cs
+C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\View\MainWindow.baml

@@ -1,0 +1,82 @@
+﻿<Window x:Class="CurriculumSchedule.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CurriculumSchedule.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Height="20" VerticalAlignment="Center">
+            <MenuItem Header="File">
+                <MenuItem Header="Добавить">
+                    <MenuItem Header="Новая группа"/>
+                    <MenuItem Header="Добавить номера пар"/>
+                    <MenuItem Header="Добавить Предмет"/>
+                    <MenuItem Header="Добавить тип кабинета"/>
+                    <MenuItem Header="Добавить кабинет"/>
+                    <MenuItem Header="Добавить преподователя"/>
+                    <MenuItem Header="Добавить семестр"/>
+                    <MenuItem Header="Добавить неделю"/>
+                    <MenuItem Header="Добавить рабочую неделю"/>
+                    <MenuItem Header="Добавить день"/>
+                    <MenuItem Header="Добавить занатие"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        
+        <TabControl Grid.Row="1" VerticalAlignment="Top" Height="28">
+
+            <TabItem Header="Таблица 1">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
+            <TabItem Header="Таблица 2">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
+            <TabItem Header="Таблица 3">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
+            <TabItem Header="Таблица 4">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
+            <TabItem Header="Таблица 5">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
+            <TabItem Header="Таблица 6">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
+            <TabItem Header="Таблица 7">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
+            <TabItem Header="Таблица 8">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
+            <TabItem Header="Таблица 9">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
+            <TabItem Header="Таблица 10">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
+            <TabItem Header="Таблица 11">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+
+        </TabControl>
+
+    </Grid>
+</Window>
