@@ -53,8 +53,8 @@ namespace CurriculumSchedule.View.ViewCabinetCRUDOperation {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CurriculumSchedule;V1.0.0.0;component/view/viewcabinetcrudoperation/createcabine" +
-                    "twindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CurriculumSchedule;component/view/viewcabinetcrudoperation/createcabinetwindow.x" +
+                    "aml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\ViewCabinetCRUDOperation\CreateCabinetWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

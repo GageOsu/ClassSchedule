@@ -1,4 +1,26 @@
 ﻿
 
 FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\MainWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewCabinetCRUDOperation\CreateCabinetWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewCabinetCRUDOperation\UpdateCabinetWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewCabinetTypeCRUDOperation\CreateCabinetTypeWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewCabinetTypeCRUDOperation\UpdateCabinetTypeWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewDayCRUDOperation\CreateDayWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewDayCRUDOperation\UpdateDayWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewGroupCRUDOperation\CreateGroupWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewGroupCRUDOperation\UpdateGroupWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewLessonCRUDOperation\CreateLessonWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewLessonCRUDOperation\UpdateLessonsWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewLessonNumberCRUDOperation\CreateLessonsNumberWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewLessonNumberCRUDOperation\UpdateLessonNumberWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewSemesterCRUDOperation\CreateSemesterWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewSemesterCRUDOperation\UpdateSemesterWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewSubjectCRUDOperation\CreateSubjectWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewSubjectCRUDOperation\UpdateSubjectWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewTeacherCRUDOperation\CreayeTeacherWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewTeacherCRUDOperation\UpdateTeacherWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewWeekCRUDOperation\CreateWeekWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewWeekCRUDOperation\UpdateWeekWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewWeekdayCRUDOperation\CreateWeekdayWindow.xaml;;
+FC:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\View\ViewWeekdayCRUDOperation\UpdateWeekdayWindow.xaml;;
 
