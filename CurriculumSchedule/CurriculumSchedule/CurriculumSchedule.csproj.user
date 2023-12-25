@@ -10,9 +10,135 @@
     <Compile Update="View\MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ViewCabinetCRUDOperation\UpdateCabinetWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewCabinetTypeCRUDOperation\CreateCabinetTypeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewCabinetTypeCRUDOperation\UpdateCabinetTypeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewDayCRUDOperation\CreateDayWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewDayCRUDOperation\UpdateDayWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewGroupCRUDOperation\CreateGroupWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewGroupCRUDOperation\UpdateGroupWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewLessonCRUDOperation\CreateLessonWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewLessonCRUDOperation\UpdateLessonsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewLessonNumberCRUDOperation\CreateLessonsNumberWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewLessonNumberCRUDOperation\UpdateLessonNumberWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewSemesterCRUDOperation\CreateSemesterWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewSemesterCRUDOperation\UpdateSemesterWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewSubjectCRUDOperation\CreateSubjectWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewSubjectCRUDOperation\UpdateSubjectWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewTeacherCRUDOperation\CreayeTeacherWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewTeacherCRUDOperation\UpdateTeacherWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewWeekCRUDOperation\CreateWeekWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewWeekCRUDOperation\UpdateWeekWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewWeekdayCRUDOperation\CreateWeekdayWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewWeekdayCRUDOperation\UpdateWeekdayWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewCabinetCRUDOperation\UpdateCabinetWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewCabinetTypeCRUDOperation\CreateCabinetTypeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewCabinetTypeCRUDOperation\UpdateCabinetTypeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewDayCRUDOperation\CreateDayWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewDayCRUDOperation\UpdateDayWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewGroupCRUDOperation\CreateGroupWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewGroupCRUDOperation\UpdateGroupWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewLessonCRUDOperation\CreateLessonWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewLessonCRUDOperation\UpdateLessonsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewLessonNumberCRUDOperation\CreateLessonsNumberWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewLessonNumberCRUDOperation\UpdateLessonNumberWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewSemesterCRUDOperation\CreateSemesterWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewSemesterCRUDOperation\UpdateSemesterWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewSubjectCRUDOperation\CreateSubjectWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewSubjectCRUDOperation\UpdateSubjectWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewTeacherCRUDOperation\CreayeTeacherWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewTeacherCRUDOperation\UpdateTeacherWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewWeekCRUDOperation\CreateWeekWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewWeekCRUDOperation\UpdateWeekWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewWeekdayCRUDOperation\CreateWeekdayWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewWeekdayCRUDOperation\UpdateWeekdayWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

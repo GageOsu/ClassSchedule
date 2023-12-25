@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\App.xaml
-1-487866684
+23723672538
 
-22709705000
+44-923438815
 2271118895342
-View\MainWindow.xaml;
+View\MainWindow.xaml;View\ViewCabinetCRUDOperation\CreateCabinetWindow.xaml;View\ViewCabinetCRUDOperation\UpdateCabinetWindow.xaml;View\ViewCabinetTypeCRUDOperation\CreateCabinetTypeWindow.xaml;View\ViewCabinetTypeCRUDOperation\UpdateCabinetTypeWindow.xaml;View\ViewDayCRUDOperation\CreateDayWindow.xaml;View\ViewDayCRUDOperation\UpdateDayWindow.xaml;View\ViewGroupCRUDOperation\CreateGroupWindow.xaml;View\ViewGroupCRUDOperation\UpdateGroupWindow.xaml;View\ViewLessonCRUDOperation\CreateLessonWindow.xaml;View\ViewLessonCRUDOperation\UpdateLessonsWindow.xaml;View\ViewLessonNumberCRUDOperation\CreateLessonsNumberWindow.xaml;View\ViewLessonNumberCRUDOperation\UpdateLessonNumberWindow.xaml;View\ViewSemesterCRUDOperation\CreateSemesterWindow.xaml;View\ViewSemesterCRUDOperation\UpdateSemesterWindow.xaml;View\ViewSubjectCRUDOperation\CreateSubjectWindow.xaml;View\ViewSubjectCRUDOperation\UpdateSubjectWindow.xaml;View\ViewTeacherCRUDOperation\CreayeTeacherWindow.xaml;View\ViewTeacherCRUDOperation\UpdateTeacherWindow.xaml;View\ViewWeekCRUDOperation\CreateWeekWindow.xaml;View\ViewWeekCRUDOperation\UpdateWeekWindow.xaml;View\ViewWeekdayCRUDOperation\CreateWeekdayWindow.xaml;View\ViewWeekdayCRUDOperation\UpdateWeekdayWindow.xaml;
 
 False
 
