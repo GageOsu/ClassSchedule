@@ -8,6 +8,8 @@ using CurriculumSchedule.Models.CRUDOperation;
 using System.Collections.ObjectModel;
 using CurriculumSchedule.Model;
 using System.Windows.Controls;
+using CurriculumSchedule.Infrastructure.Commands;
+using System.Windows.Input;
 
 namespace CurriculumSchedule.ViewModel
 {
@@ -172,6 +174,67 @@ namespace CurriculumSchedule.ViewModel
             set => _selectedWeekday = value;
         }
 
+        private LambdaCommand? _deleteItem;
+        public ICommand DeleteItem => _deleteItem ??= new(_deleteItemCommandExecuted);
+
+        public void _deleteItemCommandExecuted()
+        {
+            if(SelectedTabItem.Name == "CabinetTab" && SelectedCabinet != null)
+            {
+                CRUDCabinet.DeleteCabinet(SelectedCabinet);
+                Cabinets = CRUDCabinet.ReadCabinet();
+            }
+            if (SelectedTabItem.Name == "CabinetTypeTab" && SelectedCabinetType != null)
+            {
+                CRUDCabinetType.DeleteCabinetType(SelectedCabinetType);
+                CabinetTypes = CRUDCabinetType.ReadCabinetType();
+            }
+            if (SelectedTabItem.Name == "DayTab" && SelectedDay != null)
+            {
+                CRUDDay.DeleteDay(SelectedDay);
+                Days = CRUDDay.ReadDay();
+            }
+            if (SelectedTabItem.Name == "GroupTab" && SelectedGroup != null)
+            {
+                CRUDGroup.DeleteGroup(SelectedGroup);
+                Groups = CRUDGroup.ReadGroup();
+            }
+            if (SelectedTabItem.Name == "LessonTab" && SelectedLesson != null)
+            {
+                CRUDLesson.DeleteLesson(SelectedLesson);
+                Lessons = CRUDLesson.ReadLesson();
+            }
+            if (SelectedTabItem.Name == "LessonNumberTab" && SelectedLessonNumber != null)
+            {
+                CRUDLessonNumber.DeleteLessonNumber(SelectedLessonNumber);
+                LessonNumbers = CRUDLessonNumber.ReadLessonNumber();
+            }
+            if (SelectedTabItem.Name == "SemesterTab" && SelectedSemester != null)
+            {
+                CRUDSemester.DeleteSemester(SelectedSemester);
+                Semesters = CRUDSemester.ReadSemester();
+            }
+            if (SelectedTabItem.Name == "SubjectTab" && SelectedSubject != null)
+            {
+                CRUDSubject.DeleteSubject(SelectedSubject);
+                Subjects = CRUDSubject.ReadSubject();
+            }
+            if (SelectedTabItem.Name == "TeacherTab" && SelectedTeacher != null)
+            {
+                CRUDTeacher.DeleteTeacher(SelectedTeacher);
+                Teachers = CRUDTeacher.ReadTeacher();
+            }
+            if (SelectedTabItem.Name == "WeekTab" && SelectedWeek != null)
+            {
+                CRUDWeek.DeleteWeek(SelectedWeek);
+                Weeks = CRUDWeek.ReadWeek();
+            }
+            if (SelectedTabItem.Name == "WeekdayTab" && SelectedWeekday != null)
+            {
+                CRUDWeekday.DeleteWeekday(SelectedWeekday);
+                Weekdays = CRUDWeekday.ReadWeekday();
+            }
+        }
 
 
         public MainWindowViewModel()

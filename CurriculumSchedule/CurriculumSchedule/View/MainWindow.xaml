@@ -34,7 +34,7 @@
             </MenuItem>
         </Menu>
 
-        <TabControl Grid.Row="1">
+        <TabControl Grid.Row="1" SelectedItem="{Binding SelectedTabItem}">
 
             <TabItem Name = "CabinetTab">
                 <TabItem.Header>

@@ -24,6 +24,8 @@
 
   <ItemGroup>
 	  
+    <Folder Include="ViewModel\CRUDViewModel\" />
+	  
     <Folder Include="View\ViewWeekdayCRUDOperation\" />
 
     <Folder Include="Services\" />
