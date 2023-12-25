@@ -47,7 +47,7 @@
                     </ContextMenu>
                 </TabItem.ContextMenu>
                 <ListView x:Name="Cabinets" ItemsSource="{Binding Cabinets}"
-                          SelectedItem="{Binding SelectedPatients}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                          SelectedItem="{Binding SelectedCabinet}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn DisplayMemberBinding="{Binding Path = IdcabinetTypeNavigation.CabinetName}" Header="Тип кабинета"/>
@@ -69,7 +69,7 @@
                     </ContextMenu>
                 </TabItem.ContextMenu>
                 <ListView x:Name="CabinetTypes" ItemsSource="{Binding CabinetTypes}"
-                          SelectedItem="{Binding SelectedPatients}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                          SelectedItem="{Binding SelectedCabinetType}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn DisplayMemberBinding="{Binding Path = CabinetName}" Header="Тип кабинета"/>
@@ -90,7 +90,7 @@
                     </ContextMenu>
                 </TabItem.ContextMenu>
                 <ListView x:Name="Days" ItemsSource="{Binding Days}"
-                          SelectedItem="{Binding SelectedPatients}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                          SelectedItem="{Binding SelectedDay}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn DisplayMemberBinding="{Binding Path = IdweekNavigation.Idsemester}" Header="Неделя"/>
@@ -112,7 +112,7 @@
                     </ContextMenu>
                 </TabItem.ContextMenu>
                 <ListView x:Name="Groups" ItemsSource="{Binding Groups}"
-                          SelectedItem="{Binding SelectedPatients}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                          SelectedItem="{Binding SelectedGroup}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn DisplayMemberBinding="{Binding Path = GroupNumber}" Header="Номер группы(полное)"/>
@@ -134,7 +134,7 @@
                     </ContextMenu>
                 </TabItem.ContextMenu>
                 <ListView x:Name="Lessons" ItemsSource="{Binding Lessons}"
-                          SelectedItem="{Binding SelectedPatients}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                          SelectedItem="{Binding SelectedLesson}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn DisplayMemberBinding="{Binding Path = IddayNavigation.Idday}" Header="День"/>
@@ -159,7 +159,7 @@
                     </ContextMenu>
                 </TabItem.ContextMenu>
                 <ListView x:Name="LessonNumbers" ItemsSource="{Binding LessonNumbers}"
-                          SelectedItem="{Binding SelectedPatients}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                          SelectedItem="{Binding SelectedLessonNumber}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn DisplayMemberBinding="{Binding Path = LessonNumber1}" Header="Тип кабинета"/>
@@ -179,7 +179,7 @@
                     </ContextMenu>
                 </TabItem.ContextMenu>
                 <ListView x:Name="Semesters" ItemsSource="{Binding Semesters}"
-                          SelectedItem="{Binding SelectedPatients}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                          SelectedItem="{Binding SelectedSemester}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn DisplayMemberBinding="{Binding Path = Year}" Header="Год"/>
@@ -200,7 +200,7 @@
                     </ContextMenu>
                 </TabItem.ContextMenu>
                 <ListView x:Name="Subjects" ItemsSource="{Binding Subjects}"
-                          SelectedItem="{Binding SelectedPatients}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                          SelectedItem="{Binding SelectedSubject}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn DisplayMemberBinding="{Binding Path = SubjectName}" Header="Название предмета"/>
@@ -227,7 +227,7 @@
                     </ContextMenu>
                 </TabItem.ContextMenu>
                 <ListView x:Name="Theachets" ItemsSource="{Binding Teachers}"
-                          SelectedItem="{Binding SelectedPatients}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                          SelectedItem="{Binding SelectedTeacher}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn DisplayMemberBinding="{Binding Path = Name}" Header="Имя"/>
@@ -250,7 +250,7 @@
                     </ContextMenu>
                 </TabItem.ContextMenu>
                 <ListView x:Name="Weeks" ItemsSource="{Binding Weeks}"
-                          SelectedItem="{Binding SelectedPatients}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                          SelectedItem="{Binding SelectedWeek}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn DisplayMemberBinding="{Binding Path = IdsemesterNavigation}" Header="ID семестра"/>
@@ -270,7 +270,7 @@
                     </ContextMenu>
                 </TabItem.ContextMenu>
                 <ListView x:Name="Weekdays" ItemsSource="{Binding Weekdays}"
-                          SelectedItem="{Binding SelectedPatients}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                          SelectedItem="{Binding SelectedWeekday}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn DisplayMemberBinding="{Binding Path = NameWeekday}" Header="День недели"/>
