@@ -8,18 +8,18 @@ using System.Windows;
 
 namespace CurriculumSchedule.Models.CRUDOperation
 {
-    internal class CRUDWeekday
+    internal class CRUDWeek
     {
-        public ObservableCollection<Weekday> ReadWeekday()
+        public ObservableCollection<Week> ReadWeek()
         {
             using (ScheduleContext context = new())
             {
-                var weekdays = new ObservableCollection<Weekday>([.. context.Weekdays]);
-                return weekdays;
+                var week = new ObservableCollection<Week>([.. context.Weeks]);
+                return week;
             }
         }
 
-        public bool CreateWeekday(string nameweekday)
+        public bool CreateWeek(Semester semester)
         {
             {
                 bool created = false;
@@ -27,11 +27,11 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 {
                     using (ScheduleContext context = new())
                     {
-                        Weekday newWeekday = new()
+                        Week newWeek= new()
                         {
-                            NameWeekday = nameweekday
+                            Idsemester = semester.Idsemester,
                         };
-                        context.Weekdays.Add(newWeekday);
+                        context.Weeks.Add(newWeek);
                         context.SaveChanges();
                         created = true;
                     }
@@ -45,7 +45,7 @@ namespace CurriculumSchedule.Models.CRUDOperation
             }
         }
 
-        public bool UpdateWeekday(Weekday newweekday)
+        public bool UpdateWeek(Week newweek)
         {
             bool updated = false;
             using (ScheduleContext context = new())
@@ -53,10 +53,10 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 try
                 {
 
-                    Weekday? oldWeekday = context.Weekdays.FirstOrDefault(id => id.Idweekday == newweekday.Idweekday);
-                    if (oldWeekday != null)
+                    Week? oldWeek = context.Weeks.FirstOrDefault(id => id.Idweek== newweek.Idweek);
+                    if (oldWeek != null)
                     {
-                        oldWeekday.NameWeekday = newweekday.NameWeekday;
+                        oldWeek.Idsemester = newweek.Idsemester;
                         context.SaveChanges();
                         updated = true;
                     }
@@ -70,14 +70,14 @@ namespace CurriculumSchedule.Models.CRUDOperation
             return updated;
         }
 
-        public bool DeleteWeekday(Weekday deleteWeekday)
+        public bool DeleteWeek(Week deleteWeek)
         {
             bool deleted = false;
             using (ScheduleContext context = new())
             {
                 try
                 {
-                    context.Weekdays.Remove(deleteWeekday);
+                    context.Weeks.Remove(deleteWeek);
                     context.SaveChanges();
                     deleted = true;
                 }
