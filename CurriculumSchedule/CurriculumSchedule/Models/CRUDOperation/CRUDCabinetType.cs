@@ -8,7 +8,7 @@ using System.Windows;
 
 namespace CurriculumSchedule.Models.CRUDOperation
 {
-    internal class CRUDCabinetTyoe
+    internal class CRUDCabinetType
     {
         public ObservableCollection<CabinetType> ReadCabinetType()
         {
