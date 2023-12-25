@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace CurriculumSchedule.Models.CRUDOperation
         {
             using (ScheduleContext context = new())
             {
-                var cabinet = new ObservableCollection<Cabinet>([.. context.Cabinets]);
+                var cabinet = new ObservableCollection<Cabinet>([.. context.Cabinets.Include(u => u.IdcabinetNavigation)]);
                 return cabinet;
             }
         }

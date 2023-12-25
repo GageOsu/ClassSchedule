@@ -19,7 +19,7 @@ namespace CurriculumSchedule.Models.CRUDOperation
             }
         }
 
-        public bool CreateSemester(string Year, byte EvenOdd)
+        public bool CreateSemester(int Year, byte EvenOdd)
         {
             {
                 bool created = false;
@@ -93,5 +93,4 @@ namespace CurriculumSchedule.Models.CRUDOperation
         }
 
     }
-}
 }

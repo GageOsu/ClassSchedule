@@ -12,17 +12,17 @@ namespace CurriculumSchedule.ViewModel
 {
     internal class MainWindowViewModel : TitleViewModel
     {
-        CRUDCabinet CRUDCabinet { get; set; }
-        CRUDCabinetType CRUDCabinetType { get; set; }
-        CRUDDay CRUDDay { get; set; }
-        CRUDGroup CRUDGroup { get; set; }
-        CRUDLesson CRUDLesson { get; set; }
-        CRUDLessonNumber CRUDLessonNumber { get; set;}
-        CRUDSemester CRUDSemester { get; set;}
-        CRUDSubject CRUDSubject { get; set; }
-        CRUDTeacher CRUDTeacher { get; set; }
-        CRUDWeek CRUDWeek { get; set; }
-        CRUDWeekday CRUDWeekday { get; set; }
+        CRUDCabinet CRUDCabinet = new CRUDCabinet();
+        CRUDCabinetType CRUDCabinetType = new CRUDCabinetType();
+        CRUDDay CRUDDay = new CRUDDay(); 
+        CRUDGroup CRUDGroup = new CRUDGroup();
+        CRUDLesson CRUDLesson = new CRUDLesson();
+        CRUDLessonNumber CRUDLessonNumber = new CRUDLessonNumber();
+        CRUDSemester CRUDSemester = new CRUDSemester();
+        CRUDSubject CRUDSubject = new CRUDSubject();
+        CRUDTeacher CRUDTeacher = new CRUDTeacher();
+        CRUDWeek CRUDWeek = new CRUDWeek();
+        CRUDWeekday CRUDWeekday = new CRUDWeekday();
 
         private ObservableCollection<Cabinet> _cabinets;
         private ObservableCollection<CabinetType> _cabinetTypes;

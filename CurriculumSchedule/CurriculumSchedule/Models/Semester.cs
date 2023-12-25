@@ -7,7 +7,7 @@ public partial class Semester
 {
     public int Idsemester { get; set; }
 
-    public string? Year { get; set; }
+    public int? Year { get; set; }
 
     public byte? EvenOdd { get; set; }
 
