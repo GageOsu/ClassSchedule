@@ -23,6 +23,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="View\ViewCabinetCRUDOperation\" />
+    <Folder Include="View\ViewCabinetTypeCRUDOperation\" />
+    <Folder Include="View\ViewDayCRUDOperation\" />
+    <Folder Include="View\ViewGroupCRUDOperation\" />
+    <Folder Include="View\ViewLessonCRUDOperation\" />
+    <Folder Include="View\ViewLessonNumberCRUDOperation\" />
+    <Folder Include="View\ViewSemesterCRUDOperation\" />
+    <Folder Include="View\ViewSubjectCRUDOperation\" />
+    <Folder Include="View\ViewTeacherCRUDOperation\" />
+    <Folder Include="View\ViewWeekCRUDOperation\" />
+    <Folder Include="View\ViewWeekdayCRUDOperation\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
