@@ -49,6 +49,12 @@
     <Compile Update="View\ViewSemesterCRUDOperation\UpdateSemesterWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ViewSubjectCRUDOperation\CreateSubjectWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ViewSubjectCRUDOperation\UpdateSubjectWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\MainWindow.xaml">
@@ -91,6 +97,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ViewSemesterCRUDOperation\UpdateSemesterWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewSubjectCRUDOperation\CreateSubjectWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ViewSubjectCRUDOperation\UpdateSubjectWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
