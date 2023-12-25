@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CurriculumSchedule.View.ViewCabinetTypeCRUDOperation"
+        xmlns:vm="clr-namespace:CurriculumSchedule.ViewModel.ViewModelCabinetType"
         mc:Ignorable="d"
         Title="CreateCabinetWindow" Height="200" Width="300">
+    <Window.DataContext>
+        <vm:ViewModelUpdateCabinet/>
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -16,10 +20,10 @@
         VerticalAlignment="Center"
         Width="200">
             <TextBlock Text="Название кабинета"/>
-            <TextBox/>
+            <TextBox Text="{Binding CabinetSelectedTabItem.CabinetName}"/>
             <TextBlock Text="Описание"/>
-            <TextBox/>
+            <TextBox Text="{Binding CabinetSelectedTabItem.Discription}"/>
         </StackPanel>
-        <Button Grid.Row="1" Content="Изменить тип кабинета"/>
+        <Button Grid.Row="1" Content="Изменить тип кабинета" Command="{Binding UpdateCabinetType}"/>
     </Grid>
 </Window>
