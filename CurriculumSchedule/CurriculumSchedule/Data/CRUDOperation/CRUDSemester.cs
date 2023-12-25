@@ -5,21 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using CurriculumSchedule.Model;
 
 namespace CurriculumSchedule.Models.CRUDOperation
 {
-    internal class CRUDDay
+    internal class CRUDSemester
     {
-        public ObservableCollection<Day> ReadDay()
+        public ObservableCollection<Semester> ReadSemester()
         {
             using (ScheduleContext context = new())
             {
-                var Day = new ObservableCollection<Day>([.. context.Days]);
-                return Day;
+                var Semester = new ObservableCollection<Semester>([.. context.Semesters]);
+                return Semester;
             }
         }
 
-        public bool CreateDay(Week week, Weekday weekday, DateOnly date)
+        public bool CreateSemester(int Year, byte EvenOdd)
         {
             {
                 bool created = false;
@@ -27,13 +28,12 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 {
                     using (ScheduleContext context = new())
                     {
-                        Day newDay = new()
+                        Semester newSemester = new()
                         {
-                            Idweek = week.Idweek,
-                            Idweekday = weekday.Idweekday,
-                            DateDay = date
+                            Year = Year,
+                            EvenOdd = EvenOdd  
                         };
-                        context.Days.Add(newDay);
+                        context.Semesters.Add(newSemester);
                         context.SaveChanges();
                         created = true;
                     }
@@ -47,7 +47,7 @@ namespace CurriculumSchedule.Models.CRUDOperation
             }
         }
 
-        public bool UpdateDay(Day newDay)
+        public bool UpdateSemester(Semester newSemester)
         {
             bool updated = false;
             using (ScheduleContext context = new())
@@ -55,12 +55,11 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 try
                 {
 
-                    Day? oldDay = context.Days.FirstOrDefault(id => id.Idday == newDay.Idday);
-                    if (oldDay != null)
+                    Semester? oldSemester = context.Semesters.FirstOrDefault(id => id.Idsemester == newSemester.Idsemester);
+                    if (oldSemester != null)
                     {
-                        oldDay.Idweekday = newDay.Idweekday;
-                        oldDay.Idweek = newDay.Idweek;
-                        oldDay.DateDay = newDay.DateDay;
+                        oldSemester.Year = newSemester.Year;
+                        oldSemester.EvenOdd = newSemester.EvenOdd;
                         context.SaveChanges();
                         updated = true;
                     }
@@ -74,14 +73,14 @@ namespace CurriculumSchedule.Models.CRUDOperation
             return updated;
         }
 
-        public bool DeleteDay(Day deleteDay)
+        public bool DeleteSemester(Semester deleteSemester)
         {
             bool deleted = false;
             using (ScheduleContext context = new())
             {
                 try
                 {
-                    context.Days.Remove(deleteDay);
+                    context.Semesters.Remove(deleteSemester);
                     context.SaveChanges();
                     deleted = true;
                 }
@@ -96,4 +95,3 @@ namespace CurriculumSchedule.Models.CRUDOperation
 
     }
 }
-

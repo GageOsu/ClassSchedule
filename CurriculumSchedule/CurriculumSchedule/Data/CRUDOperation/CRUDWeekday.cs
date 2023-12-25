@@ -5,21 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using CurriculumSchedule.Model;
 
 namespace CurriculumSchedule.Models.CRUDOperation
 {
-    internal class CRUDCabinetType
+    internal class CRUDWeekday
     {
-        public ObservableCollection<CabinetType> ReadCabinetType()
+        public ObservableCollection<Weekday> ReadWeekday()
         {
             using (ScheduleContext context = new())
             {
-                var cabinet = new ObservableCollection<CabinetType>([.. context.CabinetTypes]);
-                return cabinet;
+                var weekdays = new ObservableCollection<Weekday>([.. context.Weekdays]);
+                return weekdays;
             }
         }
 
-        public bool CreateCabinetType(string cabinetName, string discription)
+        public bool CreateWeekday(string nameweekday)
         {
             {
                 bool created = false;
@@ -27,12 +28,11 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 {
                     using (ScheduleContext context = new())
                     {
-                        CabinetType newCabinetType = new()
+                        Weekday newWeekday = new()
                         {
-                            CabinetName = cabinetName,
-                            Discription = discription,
+                            NameWeekday = nameweekday
                         };
-                        context.CabinetTypes.Add(newCabinetType);
+                        context.Weekdays.Add(newWeekday);
                         context.SaveChanges();
                         created = true;
                     }
@@ -46,7 +46,7 @@ namespace CurriculumSchedule.Models.CRUDOperation
             }
         }
 
-        public bool UpdateCabinetType(CabinetType newCabinetType)
+        public bool UpdateWeekday(Weekday newweekday)
         {
             bool updated = false;
             using (ScheduleContext context = new())
@@ -54,11 +54,10 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 try
                 {
 
-                    CabinetType? oldCabinetType = context.CabinetTypes.FirstOrDefault(id => id.Idcabinet == newCabinetType.Idcabinet);
-                    if (oldCabinetType != null)
+                    Weekday? oldWeekday = context.Weekdays.FirstOrDefault(id => id.Idweekday == newweekday.Idweekday);
+                    if (oldWeekday != null)
                     {
-                        oldCabinetType.CabinetName = newCabinetType.CabinetName;
-                        oldCabinetType.Discription = newCabinetType.Discription;
+                        oldWeekday.NameWeekday = newweekday.NameWeekday;
                         context.SaveChanges();
                         updated = true;
                     }
@@ -72,14 +71,14 @@ namespace CurriculumSchedule.Models.CRUDOperation
             return updated;
         }
 
-        public bool DeleteCabinetType(CabinetType deleteCabinetType)
+        public bool DeleteWeekday(Weekday deleteWeekday)
         {
             bool deleted = false;
             using (ScheduleContext context = new())
             {
                 try
                 {
-                    context.CabinetTypes.Remove(deleteCabinetType);
+                    context.Weekdays.Remove(deleteWeekday);
                     context.SaveChanges();
                     deleted = true;
                 }
@@ -91,6 +90,5 @@ namespace CurriculumSchedule.Models.CRUDOperation
             }
             return deleted;
         }
-
     }
 }

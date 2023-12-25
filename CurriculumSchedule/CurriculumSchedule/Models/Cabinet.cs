@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CurriculumSchedule.Models;
+namespace CurriculumSchedule.Model;
 
 public partial class Cabinet
 {
@@ -13,7 +13,7 @@ public partial class Cabinet
 
     public string? CabinetNumber { get; set; }
 
-    public virtual CabinetType IdcabinetNavigation { get; set; } = null!;
+    public virtual CabinetType? IdcabinetTypeNavigation { get; set; }
 
     public virtual ICollection<Lesson> Lessons { get; set; } = new List<Lesson>();
 }

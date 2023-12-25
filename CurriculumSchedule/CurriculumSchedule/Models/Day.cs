@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CurriculumSchedule.Models;
+namespace CurriculumSchedule.Model;
 
 public partial class Day
 {

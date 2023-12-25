@@ -33,8 +33,8 @@
                 </MenuItem>
             </MenuItem>
         </Menu>
-        
-        <TabControl Grid.Row="1" VerticalAlignment="Top" Height="28">
+
+        <TabControl Grid.Row="1">
 
             <TabItem Name = "CabinetTab">
                 <TabItem.Header>
@@ -46,11 +46,11 @@
                         <MenuItem Header="Удалить" Command="{Binding DeleteItem}"/>
                     </ContextMenu>
                 </TabItem.ContextMenu>
-                <ListView x:Name="Patients" ItemsSource="{Binding Cabinets}"
+                <ListView x:Name="Cabinets" ItemsSource="{Binding Cabinets}"
                           SelectedItem="{Binding SelectedPatients}" ScrollViewer.HorizontalScrollBarVisibility="Visible">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn DisplayMemberBinding="{Binding Path = IdcabinetNavigation.CabinetName}" Header="Тип кабинета"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path = IdcabinetTypeNavigation.CabinetName}" Header="Тип кабинета"/>
                             <GridViewColumn DisplayMemberBinding="{Binding Path = AmmountPlaces}" Header="Количество мест"/>
                             <GridViewColumn DisplayMemberBinding="{Binding Path = CabinetNumber}" Header="номер кабинета"/>
                         </GridView>

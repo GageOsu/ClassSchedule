@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace CurriculumSchedule.Models;
+namespace CurriculumSchedule.Model;
 
 public partial class ScheduleContext : DbContext
 {
@@ -49,23 +49,20 @@ public partial class ScheduleContext : DbContext
 
             entity.HasIndex(e => e.CabinetNumber, "UQ_Cabinet_CabinetNumber").IsUnique();
 
-            entity.Property(e => e.Idcabinet)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("IDCabinet");
+            entity.Property(e => e.Idcabinet).HasColumnName("IDCabinet");
             entity.Property(e => e.CabinetNumber).HasMaxLength(20);
             entity.Property(e => e.IdcabinetType).HasColumnName("IDCabinetType");
 
-            entity.HasOne(d => d.IdcabinetNavigation).WithOne(p => p.Cabinet)
-                .HasForeignKey<Cabinet>(d => d.Idcabinet)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Cabinets_CabinetTypes");
+            entity.HasOne(d => d.IdcabinetTypeNavigation).WithMany(p => p.Cabinets)
+                .HasForeignKey(d => d.IdcabinetType)
+                .HasConstraintName("FK_Cabinets_CabinetTypes1");
         });
 
         modelBuilder.Entity<CabinetType>(entity =>
         {
-            entity.HasKey(e => e.Idcabinet);
+            entity.HasKey(e => e.IdcabinetType);
 
-            entity.Property(e => e.Idcabinet).HasColumnName("IDCabinet");
+            entity.Property(e => e.IdcabinetType).HasColumnName("IDCabinetType");
             entity.Property(e => e.CabinetName).HasMaxLength(45);
             entity.Property(e => e.Discription).HasMaxLength(45);
         });
@@ -150,9 +147,6 @@ public partial class ScheduleContext : DbContext
             entity.HasKey(e => e.Idsemester);
 
             entity.Property(e => e.Idsemester).HasColumnName("IDSemester");
-            entity.Property(e => e.Year)
-                .HasMaxLength(4)
-                .IsFixedLength();
         });
 
         modelBuilder.Entity<Subject>(entity =>

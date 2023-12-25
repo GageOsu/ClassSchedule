@@ -5,21 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using CurriculumSchedule.Model;
 
 namespace CurriculumSchedule.Models.CRUDOperation
 {
-    internal class CRUDTeacher
+    internal class CRUDLessonNumber
     {
-        public ObservableCollection<Teacher> ReadTeacher()
+        public ObservableCollection<LessonNumber> ReadLessonNumber()
         {
             using (ScheduleContext context = new())
             {
-                var teachers = new ObservableCollection<Teacher>([.. context.Teachers]);
-                return teachers;
+                var LessonNumber = new ObservableCollection<LessonNumber>([.. context.LessonNumbers]);
+                return LessonNumber;
             }
         }
 
-        public bool CreateTeacher(string name, string surname, string middlename, bool status)
+        public bool CreateLessonNumber(int LessonNumber1)
         {
             {
                 bool created = false;
@@ -27,14 +28,11 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 {
                     using (ScheduleContext context = new())
                     {
-                        Teacher newTeacher = new()
+                        LessonNumber newLessonNumber = new()
                         {
-                            Name = name,
-                            Surname = surname,
-                            MiddleName = middlename,
-                            Status = status
+                            LessonNumber1 = LessonNumber1,
                         };
-                        context.Teachers.Add(newTeacher);
+                        context.LessonNumbers.Add(newLessonNumber);
                         context.SaveChanges();
                         created = true;
                     }
@@ -48,7 +46,7 @@ namespace CurriculumSchedule.Models.CRUDOperation
             }
         }
 
-        public bool UpdateTeacher(Teacher newTeacher)
+        public bool UpdateLessonNumber(LessonNumber newLessonNumber)
         {
             bool updated = false;
             using (ScheduleContext context = new())
@@ -56,13 +54,10 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 try
                 {
 
-                    Teacher? oldTeacher = context.Teachers.FirstOrDefault(id => id.Idteacher == newTeacher.Idteacher);
-                    if (oldTeacher != null)
+                    LessonNumber? oldLessonNumber = context.LessonNumbers.FirstOrDefault(id => id.IdlessonNumber == newLessonNumber.IdlessonNumber);
+                    if (oldLessonNumber != null)
                     {
-                        oldTeacher.Name = newTeacher.Name;
-                        oldTeacher.Surname = newTeacher.Surname;
-                        oldTeacher.MiddleName = newTeacher.MiddleName;
-                        oldTeacher.Status = newTeacher.Status;
+                        oldLessonNumber.LessonNumber1 = newLessonNumber.LessonNumber1;
                         context.SaveChanges();
                         updated = true;
                     }
@@ -76,14 +71,14 @@ namespace CurriculumSchedule.Models.CRUDOperation
             return updated;
         }
 
-        public bool DeleteTeacher(Teacher deleteTeacher)
+        public bool DeleteLessonNumber(LessonNumber deleteLessonNumber)
         {
             bool deleted = false;
             using (ScheduleContext context = new())
             {
                 try
                 {
-                    context.Teachers.Remove(deleteTeacher);
+                    context.LessonNumbers.Remove(deleteLessonNumber);
                     context.SaveChanges();
                     deleted = true;
                 }
@@ -95,5 +90,7 @@ namespace CurriculumSchedule.Models.CRUDOperation
             }
             return deleted;
         }
+
     }
 }
+

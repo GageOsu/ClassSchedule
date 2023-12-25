@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CurriculumSchedule.ViewModel.Base;
 using CurriculumSchedule.Models.CRUDOperation;
 using System.Collections.ObjectModel;
-using CurriculumSchedule.Models;
+using CurriculumSchedule.Model;
 
 namespace CurriculumSchedule.ViewModel
 {

@@ -5,21 +5,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using CurriculumSchedule.Model;
 
 namespace CurriculumSchedule.Models.CRUDOperation
 {
-    internal class CRUDWeekday
+    internal class CRUDLesson
     {
-        public ObservableCollection<Weekday> ReadWeekday()
+        public ObservableCollection<Lesson> ReadLesson()
         {
             using (ScheduleContext context = new())
             {
-                var weekdays = new ObservableCollection<Weekday>([.. context.Weekdays]);
-                return weekdays;
+                var Lesson = new ObservableCollection<Lesson>([.. context.Lessons]);
+                return Lesson;
             }
         }
 
-        public bool CreateWeekday(string nameweekday)
+        public bool CreateLesson(Day Idday, LessonNumber IdlessonNumber, Cabinet Idcabinet, Group Idgroup, Subject Idsubject, Teacher Idteacher)
         {
             {
                 bool created = false;
@@ -27,11 +28,16 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 {
                     using (ScheduleContext context = new())
                     {
-                        Weekday newWeekday = new()
+                        Lesson newLesson = new()
                         {
-                            NameWeekday = nameweekday
+                          Idday = Idday.Idday,
+                          IdlessonNumber = IdlessonNumber.IdlessonNumber,
+                          Idcabinet = Idcabinet.Idcabinet,
+                          Idgroup = Idgroup.Idgroup,
+                          Idsubject = Idsubject.Idsubject,
+                          Idteacher = Idteacher.Idteacher
                         };
-                        context.Weekdays.Add(newWeekday);
+                        context.Lessons.Add(newLesson);
                         context.SaveChanges();
                         created = true;
                     }
@@ -45,7 +51,7 @@ namespace CurriculumSchedule.Models.CRUDOperation
             }
         }
 
-        public bool UpdateWeekday(Weekday newweekday)
+        public bool UpdateLesson(Lesson newLesson)
         {
             bool updated = false;
             using (ScheduleContext context = new())
@@ -53,10 +59,15 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 try
                 {
 
-                    Weekday? oldWeekday = context.Weekdays.FirstOrDefault(id => id.Idweekday == newweekday.Idweekday);
-                    if (oldWeekday != null)
+                    Lesson? oldLesson = context.Lessons.FirstOrDefault(id => id.Idlesson == newLesson.Idlesson);
+                    if (oldLesson != null)
                     {
-                        oldWeekday.NameWeekday = newweekday.NameWeekday;
+                        oldLesson.Idday = newLesson.Idday;
+                        oldLesson.IdlessonNumber = newLesson.IdlessonNumber;
+                        oldLesson.Idcabinet = newLesson.Idcabinet;
+                        oldLesson.Idgroup = newLesson.Idgroup;
+                        oldLesson.Idsubject = newLesson.Idsubject;
+                        oldLesson.Idteacher = newLesson.Idteacher;
                         context.SaveChanges();
                         updated = true;
                     }
@@ -70,14 +81,14 @@ namespace CurriculumSchedule.Models.CRUDOperation
             return updated;
         }
 
-        public bool DeleteWeekday(Weekday deleteWeekday)
+        public bool DeleteLesson(Lesson deleteLesson)
         {
             bool deleted = false;
             using (ScheduleContext context = new())
             {
                 try
                 {
-                    context.Weekdays.Remove(deleteWeekday);
+                    context.Lessons.Remove(deleteLesson);
                     context.SaveChanges();
                     deleted = true;
                 }
@@ -89,5 +100,6 @@ namespace CurriculumSchedule.Models.CRUDOperation
             }
             return deleted;
         }
+
     }
 }

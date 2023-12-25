@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CurriculumSchedule.Model;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -8,18 +9,18 @@ using System.Windows;
 
 namespace CurriculumSchedule.Models.CRUDOperation
 {
-    internal class CRUDLessonNumber
+    internal class CRUDGroup
     {
-        public ObservableCollection<LessonNumber> ReadLessonNumber()
+        public ObservableCollection<Group> ReadGroup()
         {
             using (ScheduleContext context = new())
             {
-                var LessonNumber = new ObservableCollection<LessonNumber>([.. context.LessonNumbers]);
-                return LessonNumber;
+                var Group = new ObservableCollection<Group>([.. context.Groups]);
+                return Group;
             }
         }
 
-        public bool CreateLessonNumber(int LessonNumber1)
+        public bool CreateGroup(string groupNumber, string shortNumber, int studentAmmount)
         {
             {
                 bool created = false;
@@ -27,11 +28,13 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 {
                     using (ScheduleContext context = new())
                     {
-                        LessonNumber newLessonNumber = new()
+                        Group newGroup = new()
                         {
-                            LessonNumber1 = LessonNumber1,
+                            GroupNumber = groupNumber,
+                            ShortNumber = shortNumber,
+                            StudentAmmount = studentAmmount
                         };
-                        context.LessonNumbers.Add(newLessonNumber);
+                        context.Groups.Add(newGroup);
                         context.SaveChanges();
                         created = true;
                     }
@@ -45,7 +48,7 @@ namespace CurriculumSchedule.Models.CRUDOperation
             }
         }
 
-        public bool UpdateLessonNumber(LessonNumber newLessonNumber)
+        public bool UpdateGroup(Group newGroup)
         {
             bool updated = false;
             using (ScheduleContext context = new())
@@ -53,10 +56,12 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 try
                 {
 
-                    LessonNumber? oldLessonNumber = context.LessonNumbers.FirstOrDefault(id => id.IdlessonNumber == newLessonNumber.IdlessonNumber);
-                    if (oldLessonNumber != null)
+                    Group? oldGroup = context.Groups.FirstOrDefault(id => id. Idgroup == newGroup.Idgroup);
+                    if (oldGroup != null)
                     {
-                        oldLessonNumber.LessonNumber1 = newLessonNumber.LessonNumber1;
+                        oldGroup.GroupNumber = newGroup.GroupNumber;
+                        oldGroup.ShortNumber = newGroup.ShortNumber;
+                        oldGroup.StudentAmmount = newGroup.StudentAmmount;
                         context.SaveChanges();
                         updated = true;
                     }
@@ -70,14 +75,14 @@ namespace CurriculumSchedule.Models.CRUDOperation
             return updated;
         }
 
-        public bool DeleteLessonNumber(LessonNumber deleteLessonNumber)
+        public bool DeleteGroup(Group deleteGroup)
         {
             bool deleted = false;
             using (ScheduleContext context = new())
             {
                 try
                 {
-                    context.LessonNumbers.Remove(deleteLessonNumber);
+                    context.Groups.Remove(deleteGroup);
                     context.SaveChanges();
                     deleted = true;
                 }

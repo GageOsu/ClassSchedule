@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CurriculumSchedule.Model;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -6,20 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
+
 namespace CurriculumSchedule.Models.CRUDOperation
 {
-    internal class CRUDGroup
+    internal class CRUDCabinet
     {
-        public ObservableCollection<Group> ReadGroup()
+        public ObservableCollection<Cabinet> ReadCabinet()
         {
             using (ScheduleContext context = new())
             {
-                var Group = new ObservableCollection<Group>([.. context.Groups]);
-                return Group;
+                var cabinet = new ObservableCollection<Cabinet>([.. context.Cabinets.Include(u => u.IdcabinetTypeNavigation)]);
+                return cabinet;
             }
         }
 
-        public bool CreateGroup(string groupNumber, string shortNumber, int studentAmmount)
+        public bool CreateCabinet(CabinetType cabinetType, int ammountPlaces, string cabinetNumber)
         {
             {
                 bool created = false;
@@ -27,13 +30,13 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 {
                     using (ScheduleContext context = new())
                     {
-                        Group newGroup = new()
+                        Cabinet newCabinet = new()
                         {
-                            GroupNumber = groupNumber,
-                            ShortNumber = shortNumber,
-                            StudentAmmount = studentAmmount
+                            IdcabinetType = cabinetType.IdcabinetType,
+                            AmmountPlaces = ammountPlaces,
+                            CabinetNumber = cabinetNumber
                         };
-                        context.Groups.Add(newGroup);
+                        context.Cabinets.Add(newCabinet);
                         context.SaveChanges();
                         created = true;
                     }
@@ -45,27 +48,27 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 }
                 return created;
             }
-        }
+        } 
 
-        public bool UpdateGroup(Group newGroup)
+        public bool UpdateCabinet(Cabinet newCabinet)
         {
             bool updated = false;
-            using (ScheduleContext context = new())
+            using(ScheduleContext context = new())
             {
                 try
                 {
 
-                    Group? oldGroup = context.Groups.FirstOrDefault(id => id. Idgroup == newGroup.Idgroup);
-                    if (oldGroup != null)
+                    Cabinet? oldCabinet = context.Cabinets.FirstOrDefault(id => id.Idcabinet == newCabinet.Idcabinet);
+                    if (oldCabinet != null)
                     {
-                        oldGroup.GroupNumber = newGroup.GroupNumber;
-                        oldGroup.ShortNumber = newGroup.ShortNumber;
-                        oldGroup.StudentAmmount = newGroup.StudentAmmount;
+                        oldCabinet.IdcabinetType = newCabinet.IdcabinetType;
+                        oldCabinet.AmmountPlaces = newCabinet.AmmountPlaces;
+                        oldCabinet.CabinetNumber = newCabinet.CabinetNumber;
                         context.SaveChanges();
                         updated = true;
                     }
                 }
-                catch (Exception ex)
+                catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                     updated = false;
@@ -74,14 +77,14 @@ namespace CurriculumSchedule.Models.CRUDOperation
             return updated;
         }
 
-        public bool DeleteGroup(Group deleteGroup)
+        public bool DeleteCabinet(Cabinet deleteCabinet)
         {
             bool deleted = false;
-            using (ScheduleContext context = new())
+            using(ScheduleContext context = new())
             {
                 try
                 {
-                    context.Groups.Remove(deleteGroup);
+                    context.Cabinets.Remove(deleteCabinet);
                     context.SaveChanges();
                     deleted = true;
                 }
@@ -96,4 +99,3 @@ namespace CurriculumSchedule.Models.CRUDOperation
 
     }
 }
-

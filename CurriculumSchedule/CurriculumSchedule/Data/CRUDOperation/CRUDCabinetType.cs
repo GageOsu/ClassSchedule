@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CurriculumSchedule.Model;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -8,18 +9,18 @@ using System.Windows;
 
 namespace CurriculumSchedule.Models.CRUDOperation
 {
-    internal class CRUDWeek
+    internal class CRUDCabinetType
     {
-        public ObservableCollection<Week> ReadWeek()
+        public ObservableCollection<CabinetType> ReadCabinetType()
         {
             using (ScheduleContext context = new())
             {
-                var week = new ObservableCollection<Week>([.. context.Weeks]);
-                return week;
+                var cabinet = new ObservableCollection<CabinetType>([.. context.CabinetTypes]);
+                return cabinet;
             }
         }
 
-        public bool CreateWeek(Semester semester)
+        public bool CreateCabinetType(string cabinetName, string discription)
         {
             {
                 bool created = false;
@@ -27,11 +28,12 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 {
                     using (ScheduleContext context = new())
                     {
-                        Week newWeek= new()
+                        CabinetType newCabinetType = new()
                         {
-                            Idsemester = semester.Idsemester,
+                            CabinetName = cabinetName,
+                            Discription = discription,
                         };
-                        context.Weeks.Add(newWeek);
+                        context.CabinetTypes.Add(newCabinetType);
                         context.SaveChanges();
                         created = true;
                     }
@@ -45,7 +47,7 @@ namespace CurriculumSchedule.Models.CRUDOperation
             }
         }
 
-        public bool UpdateWeek(Week newweek)
+        public bool UpdateCabinetType(CabinetType newCabinetType)
         {
             bool updated = false;
             using (ScheduleContext context = new())
@@ -53,10 +55,11 @@ namespace CurriculumSchedule.Models.CRUDOperation
                 try
                 {
 
-                    Week? oldWeek = context.Weeks.FirstOrDefault(id => id.Idweek== newweek.Idweek);
-                    if (oldWeek != null)
+                    CabinetType? oldCabinetType = context.CabinetTypes.FirstOrDefault(id => id.IdcabinetType == newCabinetType.IdcabinetType);
+                    if (oldCabinetType != null)
                     {
-                        oldWeek.Idsemester = newweek.Idsemester;
+                        oldCabinetType.CabinetName = newCabinetType.CabinetName;
+                        oldCabinetType.Discription = newCabinetType.Discription;
                         context.SaveChanges();
                         updated = true;
                     }
@@ -70,14 +73,14 @@ namespace CurriculumSchedule.Models.CRUDOperation
             return updated;
         }
 
-        public bool DeleteWeek(Week deleteWeek)
+        public bool DeleteCabinetType(CabinetType deleteCabinetType)
         {
             bool deleted = false;
             using (ScheduleContext context = new())
             {
                 try
                 {
-                    context.Weeks.Remove(deleteWeek);
+                    context.CabinetTypes.Remove(deleteCabinetType);
                     context.SaveChanges();
                     deleted = true;
                 }
@@ -89,5 +92,6 @@ namespace CurriculumSchedule.Models.CRUDOperation
             }
             return deleted;
         }
+
     }
 }

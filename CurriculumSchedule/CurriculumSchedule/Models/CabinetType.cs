@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CurriculumSchedule.Models;
+namespace CurriculumSchedule.Model;
 
 public partial class CabinetType
 {
-    public int Idcabinet { get; set; }
+    public int IdcabinetType { get; set; }
 
     public string? CabinetName { get; set; }
 
     public string? Discription { get; set; }
 
-    public virtual Cabinet? Cabinet { get; set; }
+    public virtual ICollection<Cabinet> Cabinets { get; set; } = new List<Cabinet>();
 }
