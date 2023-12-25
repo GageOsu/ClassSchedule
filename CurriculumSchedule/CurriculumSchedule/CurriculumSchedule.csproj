@@ -26,6 +26,8 @@
 	  
     <Folder Include="ViewModel\CRUDViewModel\" />
 	  
+    <Folder Include="ViewModel\ViewModelCabinet\" />
+	  
     <Folder Include="View\ViewWeekdayCRUDOperation\" />
 
     <Folder Include="Services\" />
