@@ -23,9 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="View\ViewSubjectCRUDOperation\" />
-    <Folder Include="View\ViewTeacherCRUDOperation\" />
-    <Folder Include="View\ViewWeekCRUDOperation\" />
     <Folder Include="View\ViewWeekdayCRUDOperation\" />
     <Folder Include="Services\" />
   </ItemGroup>
