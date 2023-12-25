@@ -19,11 +19,11 @@
         <Menu Height="20" VerticalAlignment="Center">
             <MenuItem Header="File">
                 <MenuItem Header="Добавить">
-                    <MenuItem Header="Новая группа"/>
+                    <MenuItem Header="Добавить кабинет" Command="{Binding OpenCreateCabinetCommand}"/>
+                    <MenuItem Header="Новая группа" Command="{Binding OpenCreateCabinetTypeCommand}"/>
                     <MenuItem Header="Добавить номера пар"/>
                     <MenuItem Header="Добавить Предмет"/>
                     <MenuItem Header="Добавить тип кабинета"/>
-                    <MenuItem Header="Добавить кабинет"/>
                     <MenuItem Header="Добавить преподователя"/>
                     <MenuItem Header="Добавить семестр"/>
                     <MenuItem Header="Добавить неделю"/>

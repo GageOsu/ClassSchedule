@@ -10,6 +10,9 @@ using CurriculumSchedule.Model;
 using System.Windows.Controls;
 using CurriculumSchedule.Infrastructure.Commands;
 using System.Windows.Input;
+using CurriculumSchedule.View;
+using System.Windows;
+using CurriculumSchedule.View.ViewCabinetTypeCRUDOperation;
 
 namespace CurriculumSchedule.ViewModel
 {
@@ -17,7 +20,7 @@ namespace CurriculumSchedule.ViewModel
     {
         CRUDCabinet CRUDCabinet = new CRUDCabinet();
         CRUDCabinetType CRUDCabinetType = new CRUDCabinetType();
-        CRUDDay CRUDDay = new CRUDDay(); 
+        CRUDDay CRUDDay = new CRUDDay();
         CRUDGroup CRUDGroup = new CRUDGroup();
         CRUDLesson CRUDLesson = new CRUDLesson();
         CRUDLessonNumber CRUDLessonNumber = new CRUDLessonNumber();
@@ -86,7 +89,7 @@ namespace CurriculumSchedule.ViewModel
             set => Set(ref _subjects, value);
         }
 
-        public ObservableCollection<Teacher> Teachers 
+        public ObservableCollection<Teacher> Teachers
         {
             get => _teachers;
             set => Set(ref _teachers, value);
@@ -135,27 +138,27 @@ namespace CurriculumSchedule.ViewModel
         }
         public Group SelectedGroup
         {
-            get => _selectedGroup; 
+            get => _selectedGroup;
             set => _selectedGroup = value;
         }
         public Lesson SelectedLesson
         {
-            get => _selectedLesson; 
+            get => _selectedLesson;
             set => _selectedLesson = value;
         }
         public LessonNumber SelectedLessonNumber
         {
-            get => _selectedLessonNumber; 
+            get => _selectedLessonNumber;
             set => _selectedLessonNumber = value;
         }
         public Semester SelectedSemester
         {
-            get => _selectedSemester; 
+            get => _selectedSemester;
             set => _selectedSemester = value;
         }
         public Subject SelectedSubject
         {
-            get => _selectedSubject; 
+            get => _selectedSubject;
             set => _selectedSubject = value;
         }
         public Teacher SelectedTeacher
@@ -165,12 +168,12 @@ namespace CurriculumSchedule.ViewModel
         }
         public Week SelectedWeek
         {
-            get => _selectedWeek; 
+            get => _selectedWeek;
             set => _selectedWeek = value;
         }
         public Weekday SelectedWeekday
         {
-            get => _selectedWeekday; 
+            get => _selectedWeekday;
             set => _selectedWeekday = value;
         }
 
@@ -179,7 +182,7 @@ namespace CurriculumSchedule.ViewModel
 
         public void _deleteItemCommandExecuted()
         {
-            if(SelectedTabItem.Name == "CabinetTab" && SelectedCabinet != null)
+            if (SelectedTabItem.Name == "CabinetTab" && SelectedCabinet != null)
             {
                 CRUDCabinet.DeleteCabinet(SelectedCabinet);
                 Cabinets = CRUDCabinet.ReadCabinet();
@@ -236,6 +239,46 @@ namespace CurriculumSchedule.ViewModel
             }
         }
 
+        private LambdaCommand? _openCreateCabinetCommand;
+        public ICommand OpenCreateCabinetCommand => _openCreateCabinetCommand ??= new(_onOpenCreateCabinetCommandExecuted);
+        private void _onOpenCreateCabinetCommandExecuted()
+        {
+            CreateCabinetTypeWindow createCabinetTypeWindow = new CreateCabinetTypeWindow();
+            createCabinetTypeWindow.ShowDialog();
+        }
+
+        private LambdaCommand? _openCreateCabinetTypeCommand;
+        public ICommand OpenCreateCabinetTypeCommand => _openCreateCabinetTypeCommand ??= new(_onOpenCreateCabinetTypeCommandExecuted);
+        private void _onOpenCreateCabinetTypeCommandExecuted()
+        {
+            CreateCabinetTypeWindow createCabinetTypeWindow = new CreateCabinetTypeWindow();
+            createCabinetTypeWindow.ShowDialog();
+        }
+
+        private LambdaCommand? _openUpdateCabinetCommand;
+        public ICommand OpenUpdateCabinetCommand => _openUpdateCabinetCommand ??= new(_onOpenUpdateCabinetCommandExecuted);
+        private void _onOpenUpdateCabinetCommandExecuted()
+        {
+            UpdateCabinetTypeWindow updateCabinetTypeWindow = new UpdateCabinetTypeWindow();
+            updateCabinetTypeWindow.ShowDialog();
+        }
+
+        private LambdaCommand? _updateItem;
+        public ICommand UpdateItem => _updateItem ??= new(_updateItemCommandExecuted);
+
+        public void _updateItemCommandExecuted()
+        {
+            if (SelectedTabItem.Name == "CabinetTab" && SelectedCabinet != null)
+            {
+                UpdateCabinetTypeWindow updateCabinetTypeWindow = new UpdateCabinetTypeWindow();
+                updateCabinetTypeWindow.ShowDialog();
+            }
+            if (SelectedTabItem.Name == "CabinetTypeTab" && SelectedCabinetType != null)
+            {
+                UpdateCabinetTypeWindow updateCabinetTypeWindow = new UpdateCabinetTypeWindow();
+                updateCabinetTypeWindow.ShowDialog();
+            }
+        }
 
         public MainWindowViewModel()
         {
@@ -250,7 +293,7 @@ namespace CurriculumSchedule.ViewModel
             Subjects = new ObservableCollection<Subject>(CRUDSubject.ReadSubject());
             Teachers = new ObservableCollection<Teacher>(CRUDTeacher.ReadTeacher());
             Weeks = new ObservableCollection<Week>(CRUDWeek.ReadWeek());
-            Weekdays= new ObservableCollection<Weekday>(CRUDWeekday.ReadWeekday());
-    }
+            Weekdays = new ObservableCollection<Weekday>(CRUDWeekday.ReadWeekday());
+        }
     }
 }
