@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using CurriculumSchedule.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace CurriculumSchedule.Models.CRUDOperation
 {
@@ -15,7 +16,8 @@ namespace CurriculumSchedule.Models.CRUDOperation
         {
             using (ScheduleContext context = new())
             {
-                var Lesson = new ObservableCollection<Lesson>([.. context.Lessons]);
+                var Lesson = new ObservableCollection<Lesson>([.. context.Lessons.Include(id => id.IddayNavigation).Include(id => id.IdlessonNumberNavigation).Include(id => id.IdcabinetNavigation)
+                    .Include(id => id.IdgroupNavigation).Include(id => id.IdsubjectNavigation).Include(id => id.IdteacherNavigation)]);
                 return Lesson;
             }
         }

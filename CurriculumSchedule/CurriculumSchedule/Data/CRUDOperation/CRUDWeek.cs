@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using CurriculumSchedule.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace CurriculumSchedule.Models.CRUDOperation
 {
@@ -15,7 +16,7 @@ namespace CurriculumSchedule.Models.CRUDOperation
         {
             using (ScheduleContext context = new())
             {
-                var week = new ObservableCollection<Week>([.. context.Weeks]);
+                var week = new ObservableCollection<Week>([.. context.Weeks.Include(id => id.IdsemesterNavigation)]);
                 return week;
             }
         }

@@ -1,4 +1,5 @@
 ﻿using CurriculumSchedule.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,7 +16,7 @@ namespace CurriculumSchedule.Models.CRUDOperation
         {
             using (ScheduleContext context = new())
             {
-                var Day = new ObservableCollection<Day>([.. context.Days]);
+                var Day = new ObservableCollection<Day>([.. context.Days.Include(id => id.IdweekNavigation).Include(id => id.IdweekdayNavigation)]);
                 return Day;
             }
         }
