@@ -7,6 +7,7 @@ using CurriculumSchedule.ViewModel.Base;
 using CurriculumSchedule.Models.CRUDOperation;
 using System.Collections.ObjectModel;
 using CurriculumSchedule.Model;
+using System.Windows.Controls;
 
 namespace CurriculumSchedule.ViewModel
 {
@@ -35,7 +36,6 @@ namespace CurriculumSchedule.ViewModel
         private ObservableCollection<Teacher> _teachers;
         private ObservableCollection<Week> _weeks;
         private ObservableCollection<Weekday> _weekdays;
-
         public ObservableCollection<Cabinet> Cabinets
         {
             get => _cabinets;
@@ -101,6 +101,77 @@ namespace CurriculumSchedule.ViewModel
             get => _weekdays;
             set => Set(ref _weekdays, value);
         }
+
+        public TabItem SelectedTabItem { get; set; }
+
+        private Cabinet _selectedCabinet;
+        private CabinetType _selectedCabinetType;
+        private Day _selectedDay;
+        private Group _selectedGroup;
+        private Lesson _selectedLesson;
+        private LessonNumber _selectedLessonNumber;
+        private Semester _selectedSemester;
+        private Subject _selectedSubject;
+        private Teacher _selectedTeacher;
+        private Week _selectedWeek;
+        private Weekday _selectedWeekday;
+
+        public Cabinet SelectedCabinet
+        {
+            get => _selectedCabinet;
+            set => _selectedCabinet = value;
+        }
+        public CabinetType SelectedCabinetType
+        {
+            get => _selectedCabinetType;
+            set => _selectedCabinetType = value;
+        }
+        public Day SelectedDay
+        {
+            get => _selectedDay;
+            set => _selectedDay = value;
+        }
+        public Group SelectedGroup
+        {
+            get => _selectedGroup; 
+            set => _selectedGroup = value;
+        }
+        public Lesson SelectedLesson
+        {
+            get => _selectedLesson; 
+            set => _selectedLesson = value;
+        }
+        public LessonNumber SelectedLessonNumber
+        {
+            get => _selectedLessonNumber; 
+            set => _selectedLessonNumber = value;
+        }
+        public Semester SelectedSemester
+        {
+            get => _selectedSemester; 
+            set => _selectedSemester = value;
+        }
+        public Subject SelectedSubject
+        {
+            get => _selectedSubject; 
+            set => _selectedSubject = value;
+        }
+        public Teacher SelectedTeacher
+        {
+            get => _selectedTeacher;
+            set => _selectedTeacher = value;
+        }
+        public Week SelectedWeek
+        {
+            get => _selectedWeek; 
+            set => _selectedWeek = value;
+        }
+        public Weekday SelectedWeekday
+        {
+            get => _selectedWeekday; 
+            set => _selectedWeekday = value;
+        }
+
 
 
         public MainWindowViewModel()
