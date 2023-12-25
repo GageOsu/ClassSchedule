@@ -11,7 +11,7 @@ namespace CurriculumSchedule.Models.CRUDOperation
 {
     internal class CRUDCabinetType
     {
-        public ObservableCollection<CabinetType> ReadCabinetType()
+       static public ObservableCollection<CabinetType> ReadCabinetType()
         {
             using (ScheduleContext context = new())
             {

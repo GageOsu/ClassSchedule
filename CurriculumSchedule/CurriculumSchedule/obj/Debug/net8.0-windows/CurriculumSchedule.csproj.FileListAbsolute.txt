@@ -174,3 +174,9 @@ C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\Edu
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\View\ViewWeekdayCRUDOperation\CreateWeekdayWindow.baml
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\View\ViewWeekdayCRUDOperation\UpdateWeekdayWindow.baml
 C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\bin\Debug\net8.0-windows\ClosedXML.dll
+C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\bin\Debug\net8.0-windows\Irony.dll
+C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+C:\Gage_Osu\Учебная практика 08.12.2023-28.12.2023\Учеба\EducationalPractice\CurriculumSchedule\CurriculumSchedule\bin\Debug\net8.0-windows\XLParser.dll

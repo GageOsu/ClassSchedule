@@ -31,7 +31,10 @@
                     <MenuItem Header="Добавить день"/>
                     <MenuItem Header="Добавить занатие"/>
                 </MenuItem>
-            </MenuItem>
+                <MenuItem Header="Экспортировать">
+                    <MenuItem Header="Экспорти кабинет" Command="{Binding ExportExcelCabinetType}"/>
+                </MenuItem>
+                </MenuItem>
         </Menu>
 
         <TabControl Grid.Row="1" SelectedItem="{Binding SelectedTabItem}">

@@ -13,6 +13,8 @@ using System.Windows.Input;
 using CurriculumSchedule.View;
 using System.Windows;
 using CurriculumSchedule.View.ViewCabinetTypeCRUDOperation;
+using System.IO;
+using ClosedXML.Excel;
 
 namespace CurriculumSchedule.ViewModel
 {
@@ -279,6 +281,26 @@ namespace CurriculumSchedule.ViewModel
             }
         }
 
+        private LambdaCommand? _exportExcelCabinetType;
+        public ICommand ExportExcelCabinetType => _exportExcelCabinetType ??= new(ExportExcelCabinetTypeCommandExecuted);
+
+
+        public void ExportExcelCabinetTypeCommandExecuted()
+        {
+            var data = CRUDCabinetType.ReadCabinetType();
+            var path = Path.Combine(Environment.CurrentDirectory, "Export", "cabinetType.xlsx");
+            //var rows = data.Select(c => $"{c.CabinetName},{c.Discription}");
+            //File.WriteAllLines(path, rows);
+
+            var wb = new XLWorkbook();
+            var sh = wb.Worksheets.Add("CabinetType.ru");
+            for (int i = 0; i < data.Count(); i++)
+            {
+                sh.Cell(i + 1, 1).SetValue(data.ElementAt(i).CabinetName);
+                sh.Cell(i + 1, 2).SetValue(data.ElementAt(i).Discription);
+            }
+            wb.SaveAs(path);
+        }
         public MainWindowViewModel()
         {
             Title = "Главное окно";
