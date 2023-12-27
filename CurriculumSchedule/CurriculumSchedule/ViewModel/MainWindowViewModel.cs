@@ -287,19 +287,31 @@ namespace CurriculumSchedule.ViewModel
 
         public void ExportExcelCabinetTypeCommandExecuted()
         {
-            var data = CRUDCabinetType.ReadCabinetType();
-            var path = Path.Combine(Environment.CurrentDirectory, "Export", "cabinetType.xlsx");
-            //var rows = data.Select(c => $"{c.CabinetName},{c.Discription}");
-            //File.WriteAllLines(path, rows);
+           using ( var workbook = new XLWorkbook())
+           {
+                DateTime date = DateTime.Now;
+                var path = Path.Combine(@"C:\", "Export", "ExportCabinetType " + date.ToShortDateString() + ".xlsx");
+                var worksheet = workbook.Worksheets.Add("Тип кабинета");
 
-            var wb = new XLWorkbook();
-            var sh = wb.Worksheets.Add("CabinetType.ru");
-            for (int i = 0; i < data.Count(); i++)
-            {
-                sh.Cell(i + 1, 1).SetValue(data.ElementAt(i).CabinetName);
-                sh.Cell(i + 1, 2).SetValue(data.ElementAt(i).Discription);
+                worksheet.Cell("A" + 1).Value = "Тип кабинета";
+                worksheet.Cell("B" + 1).Value = "Описание";
+                worksheet.Cell("A" + 1).Style.Font.Bold = true;
+                worksheet.Cell("B" + 1).Style.Font.Bold = true;
+
+
+
+                worksheet.Columns().AdjustToContents();
+                var data = CRUDCabinetType.ReadCabinetType();
+                for (int i = 1; i < data.Count(); i++)
+                {
+                    worksheet.Cell(i + 1, 1).SetValue(data.ElementAt(i).CabinetName);
+                    worksheet.Cell(i + 1, 2).SetValue(data.ElementAt(i).Discription);
+                }
+                var rngTable = worksheet.Range("A1:B" + data.Count());
+                rngTable.Style.Border.RightBorder = XLBorderStyleValues.Thin;
+                rngTable.Style.Border.BottomBorder = XLBorderStyleValues.Thin;
+                workbook.SaveAs(path);
             }
-            wb.SaveAs(path);
         }
         public MainWindowViewModel()
         {

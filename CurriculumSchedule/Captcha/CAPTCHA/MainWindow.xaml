@@ -1,0 +1,22 @@
+﻿<Window x:Class="CAPTCHA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CAPTCHA"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Image x:Name="CaptchaImage" Height="100" Width="117"/>
+            <TextBox x:Name="UserInput" Text=""/>
+        </StackPanel>
+        <Button x:Name="CheckCaptcha" Grid.Row="1" Content="Проверить" Click="CheckCaptcha_click_1"/>
+    </Grid>
+</Window>
