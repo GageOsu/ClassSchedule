@@ -15,6 +15,7 @@ using System.Windows;
 using CurriculumSchedule.View.ViewCabinetTypeCRUDOperation;
 using System.IO;
 using ClosedXML.Excel;
+using Microsoft.Win32;
 
 namespace CurriculumSchedule.ViewModel
 {
@@ -289,8 +290,10 @@ namespace CurriculumSchedule.ViewModel
         {
            using ( var workbook = new XLWorkbook())
            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Файлы разметки|*.xlsx;*.xlsm;";
+
                 DateTime date = DateTime.Now;
-                var path = Path.Combine(@"C:\", "Export", "ExportCabinetType " + date.ToShortDateString() + ".xlsx");
                 var worksheet = workbook.Worksheets.Add("Тип кабинета");
 
                 worksheet.Cell("A" + 1).Value = "Тип кабинета";
@@ -298,19 +301,24 @@ namespace CurriculumSchedule.ViewModel
                 worksheet.Cell("A" + 1).Style.Font.Bold = true;
                 worksheet.Cell("B" + 1).Style.Font.Bold = true;
 
-
-
                 worksheet.Columns().AdjustToContents();
                 var data = CRUDCabinetType.ReadCabinetType();
-                for (int i = 1; i < data.Count(); i++)
+                for (int i = 0; i < data.Count; i++)
                 {
-                    worksheet.Cell(i + 1, 1).SetValue(data.ElementAt(i).CabinetName);
-                    worksheet.Cell(i + 1, 2).SetValue(data.ElementAt(i).Discription);
+                    worksheet.Cell(i + 2, 1).SetValue(data.ElementAt(i).CabinetName);
+                    worksheet.Cell(i + 2, 2).SetValue(data.ElementAt(i).Discription);
                 }
-                var rngTable = worksheet.Range("A1:B" + data.Count());
+                var zxc = data.Count +1;
+                var rngTable = worksheet.Range("A1:B" + zxc);
                 rngTable.Style.Border.RightBorder = XLBorderStyleValues.Thin;
                 rngTable.Style.Border.BottomBorder = XLBorderStyleValues.Thin;
-                workbook.SaveAs(path);
+
+
+                if (saveFileDialog.ShowDialog() == true)
+                {
+                    var put = saveFileDialog.FileName;
+                    workbook.SaveAs(put);
+                }
             }
         }
         public MainWindowViewModel()
